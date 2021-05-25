@@ -1,0 +1,33 @@
+>>> s = __import__('4-print_square').print_square
+>>> s(4)
+####
+####
+####
+####
+>>> s(1)
+#
+>>> s(0)
+>>> try:
+...     s("size")
+... except Exception as e:
+...     print(e)
+...
+size must be an integer
+>>> try:
+...     s(None)
+... except Exception as e:
+...     print(e)
+...
+size must be an integer
+>>> try:
+...     s(-5)
+... except Exception as e:
+...     print(e)
+...
+size must be >= 0
+>>> try:
+...     s()
+... except Exception as e:
+...     print(e)
+...
+print_square() missing 1 required positional argument: 'size'
