@@ -1,0 +1,43 @@
+>>> t = __import__('5-text_indentation').text_indentation
+>>> t("hello")
+hello
+>>> t("hello:")
+hello:
+<BLANKLINE>
+>>> t("hello: ")
+hello:
+<BLANKLINE>
+>>> t("hello? how are you?")
+hello?
+<BLANKLINE>
+how are you?
+<BLANKLINE>
+>>> t("hello:     how are you?")
+hello:
+<BLANKLINE>
+how are you?
+<BLANKLINE>
+>>> try:
+...     t(["word1", "word2"])
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     t(None)
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     t(5)
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     t()
+... except Exception as e:
+...     print(e)
+...
+text_indentation() missing 1 required positional argument: 'text'
