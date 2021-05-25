@@ -1,0 +1,45 @@
+>>> add = __import__("0-add_integer").add_integer
+>>> add(1, 2)
+3
+>>> add(100, -2)
+98
+>>> add(2)
+100
+>>> add(100.3, -2)
+98
+>>> add(100.3, -2.1)
+98
+>>> add(100, -2.1)
+98
+>>> try:
+...     add(4, "School")
+... except Exception as e:
+...     print(e)
+...
+b must be an integer
+>>> try:
+...     add(None)
+... except Exception as e:
+...     print(e)
+...
+a must be an integer
+>>> add(1, 2.9)
+3
+>>> try:
+...     add(1, [5, 6])
+... except Exception as e:
+...     print(e)
+...
+b must be an integer
+>>> try:
+...     add(1, float('inf'))
+... except Exception as e:
+...     print(e)
+...
+cannot convert float infinity to integer
+>>> try:
+...     add(1, float('NaN'))
+... except Exception as e:
+...     print(e)
+...
+cannot convert float NaN to integer
