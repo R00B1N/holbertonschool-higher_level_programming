@@ -1,0 +1,71 @@
+>>> ma = __import__("2-matrix_divided").matrix_divided
+>>> ma([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> ma([[1, 2.0, 3], [4.0, 5.0, 6]], 3.5)
+[[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+>>> try:
+...     ma([[]], 200)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     ma(None, 1)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     ma([1, 2, 3], 2)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     ma([[1, 2, 3], ["5", 6, 7]], 1)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     ma([[1, 2, 3], "holberton"], 3)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     ma([[1, 2, 3], [5, 6], [0, 0, 0, 0]], 2)
+... except Exception as e:
+...     print(e)
+...
+Each row of the matrix must have the same size
+>>> try:
+...     ma([[1, 2, 3], [4, 5, 6]], 0)
+... except Exception as e:
+...     print(e)
+...
+division by zero
+>>> try:
+...     ma([[1, 2, 3], [4, 5, 6]], "5")
+... except Exception as e:
+...     print(e)
+...
+div must be a number
+>>> try:
+...     ma([[1, 2, 3], [4, 5, 6]], float('inf'))
+... except Exception as e:
+...     print(e)
+...
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> try:
+...     ma([[1, 2, 3], [4, 5, 6]])
+... except Exception as e:
+...     print(e)
+...
+matrix_divided() missing 1 required positional argument: 'div'
+>>> try:
+...     ma()
+... except Exception as e:
+...     print(e)
+...
+matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
