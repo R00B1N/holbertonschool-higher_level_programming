@@ -1,0 +1,41 @@
+>>> ml = __import__('1-my_list').MyList
+>>> L = ml()
+>>> L.append(1)
+>>> L.append(9)
+>>> L.append(8)
+>>> L.append(2)
+>>> L.print_sorted()
+[1, 2, 8, 9]
+>>> L = ml(['h', 'e', 'r', 'd'])
+>>> L.print_sorted()
+['d', 'e', 'h', 'r']
+>>> L = ml(['h', 'e', 'r', 'd'])
+>>> print(L)
+['h', 'e', 'r', 'd']
+>>> L = ml(["hello", "how", "are", "you"])
+>>> L.print_sorted()
+['are', 'hello', 'how', 'you']
+>>> L = ml(["hello", "there", 10, 'z'])
+>>> try:
+...     L.print_sorted()
+... except:
+...     pass
+...
+>>> L = ml([])
+>>> L.print_sorted()
+[]
+>>> L = ml([[1, 2], 'e', 5, 10])
+>>> try:
+...     L.print_sorted()
+... except:
+...     pass
+...
+>>> L = ml()
+>>> L.print_sorted()
+[]
+>>> L = ml([1, -2])
+>>> print(L)
+[1, -2]
+>>> L = ml([1, -2])
+>>> L.print_sorted()
+[-2, 1]
